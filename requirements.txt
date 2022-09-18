@@ -8,11 +8,13 @@ inflect
 unidecode 
 natsort 
 pandas 
-jupyter 
+jupyter
 tgt 
 srt 
 peakutils 
 webrtcvad 
-torch
-torchaudio
 git+https://github.com/jfsantos/maracas@master#egg=maracas
+torch==1.12.1+cu116
+torchaudio==0.12.1+cu116
+--extra-index-url https://download.pytorch.org/whl/cu116 torch==1.12.1+cu116
+--extra-index-url https://download.pytorch.org/whl/cu116 torchaudio==0.12.1+cu116

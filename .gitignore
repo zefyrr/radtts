@@ -1,0 +1,7 @@
+filelists/wavs
+local_trained_models
+pre_trained_models
+__pycache__
+data_cache
+results
+tts_text_processing/__pycache__
