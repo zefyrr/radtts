@@ -1,6 +1,6 @@
 filelists/wavs
 local_trained_models
-pre_trained_models
+models
 __pycache__
 data_cache
 results
