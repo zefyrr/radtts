@@ -8,10 +8,28 @@ docker build . -t radtts_img
 nvidia-docker run \
     --rm --gpus all \
     -v ${PWD}:/src \
+    --ipc=host \
+    --ulimit memlock=-1 \
+    --ulimit stack=67108864 \
     -it \
     radtts_img /bin/bash
 ```
 
+
+## Train command
+```
+export CONFIG_PATH=/src/configs/config_ljs_decoder.json
+export MODEL_OUT=/src/local_trained_models
+export NUM_GPUS=2
+
+
+python \
+    -m torch.distributed.launch \
+    --use_env --nproc_per_node=${NUM_GPUS}  \
+    train.py \
+        -c ${CONFIG_PATH} \
+        -p train_config.output_directory=${MODEL_OUT}
+```
 
 
 ## Inference command
