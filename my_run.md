@@ -20,8 +20,8 @@ nvidia-docker run \
 ```
 export CONFIG_PATH=/src/configs/config_ljs_decoder.json
 export MODEL_OUT=/src/local_trained_models
-export NUM_GPUS=2
-export OMP_NUM_THREADS=4
+export NUM_GPUS=4
+export OMP_NUM_THREADS=5
 
 
 python \
